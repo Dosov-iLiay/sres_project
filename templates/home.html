@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <style>
+        .selka a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+.selka a:link {
+  color: #265301;
+}
+
+.selka a:visited {
+  color: #437a16;
+}
+
+.selka a:focus {
+  border-bottom: 1px solid;
+  background: #bae498;
+}
+
+.selka a:hover {
+  border-bottom: 1px solid;
+  background: #cdfeaa;
+}
+
+.selka a:active {
+  background: #265301;
+  color: #cdfeaa;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="{{ url_for('static', filename='img/1.png') }}" alt="Мясной ряд"></a>
+            <h1>Главная</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/show">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="mainer">
+        <div class="card">
+            <img src="{{ url_for('static', filename='imag/meat-3359248_1920.png') }}" alt="Мясо 1">
+            <h3>Говядина</h3>
+            <p>Цена: $10.99 за фунт</p>
+          </div>
+          <div class="card">
+            <img height="200px" src="{{ url_for('static', filename='imag/images.png') }}" alt="Мясо 2">
+            <h3>Свинина</h3>
+            <p>Цена: $8.99 за фунт</p>
+          </div>
+          <div class="card">
+            <img height="200px" src="{{ url_for('static', filename='imag/kuritsa-opasna.png') }}" alt="Мясо 3">
+            <h3>Курица</h3>
+            <p>Цена: $5.99 за фунт</p>
+          </div>
+        <!-- <div class="card">
+            <a href="document/{{file}}">{{file}}</a>
+        </div> -->
+    </div>        
+    <hr>
+    <a  href="/otzav" class="selka">Оставьте отзыв!</a>
+</body>
+</html>

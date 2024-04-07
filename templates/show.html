@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All files</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><img src="{{ url_for('static', filename='img/1.png') }}" alt="Мясной ряд"></a>
+            <h1>Главная</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/show">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% for file_name in list_files %}
+        <div class="card">
+            <!-- <h1 class="">{{ file_name }}</h1> -->
+            <a class="zag" href="/file/{{ file_name }}">{{ file_name }}</a>
+            <!-- <a  href="/delete/{{ file_name }}">Delete</a> -->
+        </div>
+    {% endfor %}
+</body>
+</html>
